@@ -170,6 +170,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.15.5-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.15.5-x86_64-linux)
+      racc (~> 1.4)
     optparse (0.1.1)
     os (1.1.4)
     plist (3.7.0)
@@ -223,6 +225,7 @@ PLATFORMS
   arm64-darwin-23
   x86_64-darwin-20
   x86_64-darwin-23
+  x86_64-linux
 
 DEPENDENCIES
   dotenv

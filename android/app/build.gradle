@@ -108,7 +108,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.mattermost.rnbeta"
+        applicationId "com.tcg.mattermost" // applicationId "com.mattermost.rnbeta"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 509
@@ -213,6 +213,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation "com.google.firebase:firebase-messaging:$firebaseVersion"
+    // implementation platform('com.google.firebase:firebase-bom:32.7.2') firebase.google.com install instructions said to add this, but chatGPT says the above line is probably fine instead: https://chat.openai.com/c/5c9dbeb3-9c91-413f-ad86-e07cca2320d2
 
     androidTestImplementation('com.wix:detox:+')
     implementation project(':reactnativenotifications')

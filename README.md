@@ -1,3 +1,11 @@
+Guide I used: https://www.charcoalstyles.com/blog/android-development-in-wsl2/
+Set Kernel Permissions: sudo chmod 777 -R /dev/kvm
+Run Emulator: /home/stu/Android/Sdk/emulator/emulator @Pixel_3a_API_34_extension_level_7_x86_64 -gpu host
+Wipe Emulator: /home/stu/Android/Sdk/emulator/emulator -avd Pixel_3a_API_34_extension_level_7_x86_64 -wipe-data
+Run Android: npm run android
+
+Android keystore alias: tcg-mattermost
+
 # Mattermost Mobile v2
 
 - **Minimum Server versions:** Current ESR version (8.1.0+)
