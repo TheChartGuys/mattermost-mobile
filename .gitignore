@@ -1,11 +1,12 @@
-assets/override
+# assets/override
 dist
 build-ios
 *.zip
 server.PID
 mattermost.keystore
 tmp/
-.env
+*.env
+!/fastlane/.env
 env.d.ts
 *.apk
 *.aab
@@ -84,7 +85,7 @@ tags
 **/fastlane/Preview.html
 **/fastlane/screenshots
 **/fastlane/test_output
-**/fastlane/.env
+# **/fastlane/.env
 
 # Sentry
 android/sentry.properties
