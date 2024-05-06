@@ -25,6 +25,19 @@ jobs:
     - name: Install npm dependencies
       run: npm install
 
+    - name: Install Watchman
+      run: brew install watchman
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "stuwashere@gmail.com"
+        git config --global user.name "Stuart Morris"
+
+    - name: Install specific Cocoapods version
+      run: |
+        sudo gem uninstall cocoapods
+        sudo gem install cocoapods -v 1.14.3
+
     - name: Build iOS App
       env:
         FASTLANE_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
