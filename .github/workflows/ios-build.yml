@@ -11,7 +11,7 @@ on:
 jobs:
   build-ios:
     name: Build iOS
-    runs-on: macos-latest
+    runs-on: macos-11  # This specifies an Intel-based runner
 
     steps:
     - name: Checkout code
