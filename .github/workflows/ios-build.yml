@@ -11,7 +11,7 @@ on:
 jobs:
   build-ios:
     name: Build iOS
-    runs-on: macos-latest
+    runs-on: macos-14-large
 
     steps:
     - name: Checkout code
@@ -20,7 +20,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18.7.0'  # Match this with your project requirements
+        node-version: '18.10.0'  # Match this with your project requirements
 
     - name: Install npm dependencies
       run: npm install
