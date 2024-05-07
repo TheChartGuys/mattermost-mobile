@@ -42,7 +42,7 @@ jobs:
       env:
         FASTLANE_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-        MATCH_GITHUB_TOKEN: ${{ secrets.MATCH_GITHUB_TOKEN }}
+        MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
         # APP_IDENTIFIER: ${{ secrets.APP_IDENTIFIER }}
         # APPLE_DEVELOPER_TEAM_ID: ${{ secrets.APPLE_DEVELOPER_TEAM_ID }}
         # Ensure all necessary environment variables are correctly set
