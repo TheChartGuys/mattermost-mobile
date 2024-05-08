@@ -12,7 +12,7 @@
 # username("stuwashere@gmail.com")
 
 # type('appstore')
-readonly(false)
+# readonly(false)
 # generate_apple_certs(true)
 # skip_provisioning_profiles(false)
 # team_id('TPSN96N57K')
