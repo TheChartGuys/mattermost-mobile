@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1008380406476:android:8259e504a13335ba543069",
+        "mobilesdk_app_id": "1:1008380406476:android:debd26ed280bc726543069",
         "android_client_info": {
-          "package_name": "com.tcg.chat"
+          "package_name": "com.tcg.mattermost"
         }
       },
       "oauth_client": [

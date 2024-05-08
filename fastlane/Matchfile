@@ -5,3 +5,38 @@
 
 # For all available options run `fastlane match --help`
 # Remove the # in the beginning of the line to enable the other options
+
+# git_url("https://github.com/TheChartGuys/fastlane-certs.git")
+
+# app_identifier(['com.tcg.chat.NotificationService','com.tcg.chat.MattermostShare','com.tcg.chat'])
+# username("stuwashere@gmail.com")
+
+# type('appstore')
+readonly(false)
+# generate_apple_certs(true)
+# skip_provisioning_profiles(false)
+# team_id('TPSN96N57K')
+# storage_mode('git')
+# git_url('https://github.com/TheChartGuys/fastlane-certs.git')
+# git_branch('master')
+# shallow_clone(true)
+# clone_branch_directly(false)
+# git_basic_authorization('VGhlU3R1OmdpdGh1Yl9wYXRfMTFBQU01VTVJMEFaU2R0YVlNbGdTZF9kNnlOUFIyV2dLNnMzcFUzQzI1c1h6UEluRklOVFdUN2RDVjFoS2d5UGxIUkxESVJGVlFvdERxUFRlUw==')
+# skip_google_cloud_account_confirmation(false)
+# s3_skip_encryption(false)
+# # gitlab_host('https://gitlab.com')
+# keychain_name('fastlane_tmp_keychain')
+# force(false)
+# force_for_new_devices(false)
+# include_mac_in_profiles(false)
+# include_all_certificates(false)
+# force_for_new_certificates(false)
+# skip_confirmation(false)
+# safe_remove_certs(false)
+# skip_docs(true)
+# platform('ios')
+# derive_catalyst_app_identifier(false)
+# fail_on_name_taken(false)
+# skip_certificate_matching(false)
+# skip_set_partition_list(false)
+# verbose(false)

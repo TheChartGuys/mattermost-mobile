@@ -108,7 +108,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.tcg.mattermost" // applicationId "com.mattermost.rnbeta"
+        applicationId "com.tcg.chat" // applicationId "com.mattermost.rnbeta"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 509
