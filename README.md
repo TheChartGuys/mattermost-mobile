@@ -1,3 +1,9 @@
+////////////////////////////////////
+create fastlane session token
+- https://docs.fastlane.tools/getting-started/ios/authentication/
+- update in github repo workflow secrets
+////////////////////////////////////
+
 Guide I used: https://www.charcoalstyles.com/blog/android-development-in-wsl2/
 Set Kernel Permissions: sudo chmod 777 -R /dev/kvm
 Run Emulator: /home/stu/Android/Sdk/emulator/emulator @Pixel_3a_API_34_extension_level_7_x86_64 -gpu host
