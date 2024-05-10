@@ -361,7 +361,7 @@ platform :ios do
       api_key = get_apple_api_key()
       match(
           api_key: api_key,
-          type: ENV['MATCH_TYPE'] || 'adhoc', readonly: false, force_for_new_devices: true, force: true
+          type: ENV['MATCH_TYPE'] || 'adhoc'
       )
     end
   end
@@ -542,13 +542,13 @@ platform :ios do
     # Sync the provisioning profiles using match
     if ENV['SYNC_PROVISIONING_PROFILES'] == 'true'
       if !ENV['MATCH_PASSWORD'].nil? && !ENV['MATCH_PASSWORD'].empty?
-        match(type: ENV['MATCH_TYPE'] || 'adhoc', readonly: false, force_for_new_devices: true, force: true)
+        match(type: ENV['MATCH_TYPE'] || 'adhoc')
       end
       if !ENV['IOS_API_KEY_ID'].nil? && !ENV['IOS_API_KEY_ID'].empty?
         api_key = get_apple_api_key()
         match(
             api_key: api_key,
-            type: ENV['MATCH_TYPE'] || 'adhoc', readonly: false, force_for_new_devices: true, force: true
+            type: ENV['MATCH_TYPE'] || 'adhoc'
         )
       end
     end
