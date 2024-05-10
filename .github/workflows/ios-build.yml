@@ -53,4 +53,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: iOS App IPA
-        path: ./TCG_Chat.ipa  # Ensure this is the correct path to the IPA file
+        path: ./TCG_Trader_Chat.ipa  # Ensure this is the correct path to the IPA file
