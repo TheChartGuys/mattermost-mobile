@@ -33,7 +33,7 @@ jobs:
     - name: Install specific Cocoapods version
       run: |
         sudo gem uninstall cocoapods
-        sudo gem install cocoapods -v 1.14.3
+        sudo gem install cocoapods -v 1.15.2
 
     - name: Install npm dependencies
       run: npm install
