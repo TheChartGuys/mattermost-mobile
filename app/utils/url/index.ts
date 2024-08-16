@@ -7,6 +7,7 @@ import urlParse from 'url-parse';
 
 import {Files} from '@constants';
 import {emptyFunction} from '@utils/general';
+import {logDebug} from '@utils/log';
 
 import {latinise} from './latinise';
 
@@ -19,19 +20,33 @@ export function isValidUrl(url = '') {
 
 export function sanitizeUrl(url: string, useHttp = false) {
     let preUrl = urlParse(url, true);
-    let protocol = preUrl.protocol;
+    let protocol = useHttp ? 'http:' : preUrl.protocol;
 
     if (!preUrl.host || preUrl.protocol === 'file:') {
         preUrl = urlParse('https://' + stripTrailingSlashes(url), true);
     }
 
-    if (!protocol || (preUrl.protocol === 'http:' && !useHttp)) {
+    if (preUrl.protocol === 'http:' && !useHttp) {
         protocol = 'https:';
+    } else if (!protocol) {
+        protocol = useHttp ? 'http:' : 'https:';
     }
 
     return stripTrailingSlashes(
         `${protocol}//${preUrl.host}${preUrl.pathname}`,
     );
+}
+
+export async function getUrlAfterRedirect(url: string, useHttp = false) {
+    const link = sanitizeUrl(url, useHttp);
+    try {
+        const result = await fetch(link, {
+            method: 'HEAD',
+        });
+        return {url: result.url};
+    } catch (error) {
+        return {error};
+    }
 }
 
 export async function getServerUrlAfterRedirect(serverUrl: string, useHttp = false) {
@@ -43,12 +58,11 @@ export async function getServerUrlAfterRedirect(serverUrl: string, useHttp = fal
             url = resp.redirectUrls[resp.redirectUrls.length - 1];
         }
     } catch (error) {
-        if (useHttp) {
-            return undefined;
-        }
+        logDebug('getServerUrlAfterRedirect error', url, error);
+        return {error};
     }
 
-    return sanitizeUrl(url, useHttp);
+    return {url: sanitizeUrl(url, useHttp)};
 }
 
 export function stripTrailingSlashes(url = '') {
