@@ -20,7 +20,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18.15' # Ensuring Node version is as required
+        node-version: '18.18' # Ensuring Node version is as required
 
     - name: Install Watchman
       run: brew install watchman
